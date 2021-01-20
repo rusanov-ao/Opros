@@ -58,20 +58,6 @@ def deleteOpros(title):
 
 
 
-def updateCustomer(id, **kwargs):
-	column_list = [f'{key} = ?' for key in kwargs.keys()]
-		
-	query = f'''
-	UPDATE customer
-	set {' , '.join(column_list)}
-	where id = ?
-	'''
-
-	cursor.execute(query, [*kwargs.values(), id])
-	conn.commit()
-
-
-
 def updateOpros(title, relise):
 	column_list = [f'{key} = ?' for key in kwargs.keys()]
 
