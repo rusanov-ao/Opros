@@ -1,5 +1,5 @@
 import sqlite3
-import django
+import django as db
 
 
 conn = sqlite3.connect('opros.db')
